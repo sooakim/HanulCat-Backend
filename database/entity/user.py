@@ -11,7 +11,7 @@ class User(Base):
     id = Column(Integer, primary_key=True, index=True)
     email = Column(String, unique=True, index=True)
     name = Column(String, index=True)
-    password = Column(String, index=True)
+    password = Column(String)
     deleted = Column(Boolean, default=False)
     blocked = Column(Boolean, default=False)
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
